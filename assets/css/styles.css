@@ -78,8 +78,7 @@ nav {
 
 nav h1 a {
   color: var(--primary-color);
-  font-size: 30px;
-
+  font-size: 30px;p
 }
 
 nav a {
@@ -125,7 +124,6 @@ nav ul li {
 .small-number {
   font-size: 10px;
 }
-
 
 /* Navbar ends */
 
@@ -265,8 +263,7 @@ nav ul li {
 
 .project-container {
   text-align: center;
-  width: 35.875rem;
-  padding: 1rem;
+  width: 20.875rem;
 }
 
 .project-container p {
