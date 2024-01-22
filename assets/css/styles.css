@@ -78,7 +78,7 @@ nav {
 
 nav h1 a {
   color: var(--primary-color);
-  font-size: 30px;p
+  font-size: 30px;
 }
 
 nav a {
@@ -427,6 +427,64 @@ body {
   min-width: 12.5rem /*200px*/;
 }
 
+.ft-main-item2 .inner-box {
+  background-color: var(--extra-color);
+  margin-top: -40px;
+  margin-left: -100px;
+  padding: 40px;
+}
+
+.ft-main-item2 .inner-box h3 {
+  font-size: 120px;
+  margin-top: -50px;
+  color: var(--tertiary-color);
+}
+
+.ft-main-item2 .inner-box p {
+  margin-top: -50px;
+  color: var(--tertiary-color);
+}
+.ft-main-item2 .inner-box p1 {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--tertiary-color);
+}
+.ft-main-item3 .inner-box {
+  background-color: #136ef7;
+  margin-top: -20px;
+  margin-left: -155px;
+  padding: 40px;
+}
+
+.ft-main-item3 .inner-box h3 {
+  font-size: 120px;
+  margin-top: -50px;
+  color: var(--tertiary-color);
+}
+
+.ft-main-item3 .inner-box p {
+  margin-top: -50px;
+  color: var(--tertiary-color);
+}
+
+.ft-main-item4 .inner-box {
+  background-color: var(--experiences-color);
+  margin-top: 307px;
+  margin-left: -563px;
+  padding: 35px;
+}
+
+.ft-main-item4 .inner-box h3 {
+  font-size: 120px;
+  margin-top: -50px;
+  color: var(--tertiary-color);
+}
+
+.ft-main-item4 .inner-box p {
+  margin-top: -50px;
+  color: var(--tertiary-color);
+}
+
 form {
     display: flex;
     flex-wrap: wrap;
@@ -460,11 +518,12 @@ input[type="submit"]:hover {
   justify-content: center;
   border-top: 1px #777 solid; 
   padding-top: 1.25rem;
+  margin-top: -39px;
 }
 
 .ft-social-list li {
   margin: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .ft-legal {
