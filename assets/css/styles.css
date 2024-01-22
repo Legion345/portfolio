@@ -431,7 +431,7 @@ body {
   background-color: var(--extra-color);
   margin-top: -40px;
   margin-left: -100px;
-  padding: 40px;
+  padding: 35px;
 }
 
 .ft-main-item2 .inner-box h3 {
@@ -449,11 +449,12 @@ body {
   font-size: 20px;
   color: var(--tertiary-color);
 }
+
 .ft-main-item3 .inner-box {
   background-color: #136ef7;
   margin-top: -20px;
   margin-left: -155px;
-  padding: 40px;
+  padding: 35px;
 }
 
 .ft-main-item3 .inner-box h3 {
@@ -469,8 +470,8 @@ body {
 
 .ft-main-item4 .inner-box {
   background-color: var(--experiences-color);
-  margin-top: 307px;
-  margin-left: -563px;
+  margin-top: 290px;
+  margin-left: -553px;
   padding: 35px;
 }
 
@@ -482,6 +483,12 @@ body {
 
 .ft-main-item4 .inner-box p {
   margin-top: -50px;
+  color: var(--tertiary-color);
+}
+
+.ft-main-item4 .inner-box p1 {
+  font-weight: bold;
+  font-size: 20px;
   color: var(--tertiary-color);
 }
 
