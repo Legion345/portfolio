@@ -28,6 +28,8 @@ html {
   padding: 0;
 }
 
+
+
 /* CSS Resets */
 * {
   margin: 0;
@@ -99,6 +101,7 @@ nav ul {
 nav ul li {
   font-weight: var(--bold-font);
 }
+
 
 .dot {
   color:#ffffff;
@@ -573,6 +576,19 @@ input[type="submit"]:hover {
   margin: 10px;
 }
 
+.circle {
+  --circle-size: 40px;
+  position: fixed;
+  height: var(--circle-size);
+  width: var(--circle-size);
+  border: 1px solid #3adcf8;
+  border-radius: 100%;
+  top: calc(var(--circle-size) / 2 * -1);
+  left: calc(var(--circle-size) / 2 * -1);
+  pointer-events: none;
+  z-index: 3;
+}
+
 /* Media queries for responsiveness */
 @media screen and (max-width: 720px) {
   nav {
@@ -653,6 +669,8 @@ input[type="submit"]:hover {
     max-width: 23.75rem;
   }
 }
+
+
 
 @media screen and (max-width: 420px) {
   .hero img {
