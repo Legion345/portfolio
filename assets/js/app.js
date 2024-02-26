@@ -85,73 +85,43 @@ window.addEventListener('resize', adjustBioTextSize);
 
 
 
+// Professional Experience Boxes
 
+const customSelect = document.querySelector(".custom-select");
+const selectBtn = document.querySelector(".select-button");
 
-// Get the reference to the "+" button
-const addButton = document.querySelector('.add-btn');
-let isBoxVisible = false;
+const selectedValue = document.querySelector(".selected-value");
+const optionsList = document.querySelectorAll(".select-dropdown li");
 
-// Attach the click event listener to the "+" button
-addButton.addEventListener('click', toggleNewBox);
-
-// Function to toggle the visibility of the new box
-function toggleNewBox() {
-  const newBox = document.createElement('div');
-  const newTitle = document.createElement('h3');
-  const addButtonContainer = addButton.parentNode;
-  newBox.className = 'details1 new-box hidden'; // Add the "new-box" class with "hidden" class initially
-  newTitle.className = 'details1-title';
-  newTitle.innerHTML = 'Provide desktop support to end-users, troubleshooting equipment issues, networking challenges, and executing break-fix efforts';
-
-  if (!isBoxVisible) {
-    newBox.appendChild(newTitle);
-    // Insert a new div element with padding between the newBox and old box
-    const paddingDiv = document.createElement('div');
-    paddingDiv.style.paddingTop = '20px'; // Adjust the padding value as per your preference
-    addButtonContainer.parentNode.insertBefore(paddingDiv, addButtonContainer.nextSibling);
-    addButtonContainer.parentNode.insertBefore(newBox, paddingDiv.nextSibling);
-    addButton.value = '  - ';
-    isBoxVisible = true;
-    setTimeout(() => {
-      newBox.classList.remove('hidden'); // Remove the "hidden" class to reveal the new box with animation
-    }, 100);
-  } else {
-    addButton.value = ' + ';
-    newBox.classList.add('slide-out'); // Add the "slide-out" class to trigger the slide-out animation
-    setTimeout(() => {
-      addButtonContainer.nextSibling.remove();
-      addButtonContainer.nextSibling.remove(); // Remove the padding div
-      isBoxVisible = false;
-    }, 500);
-  }
-}
-
-var heroSection = document.getElementById('home');
-var skillsSection = document.getElementById('skills-section');
-var navbar = document.querySelector("nav");
-var isNavbarVisible = true;
-
-window.addEventListener('scroll', function() {
-  var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-  if (scrollPosition >= heroSection.offsetHeight) {
-    navbar.style.position = "sticky";
-    navbar.style.top = "0";
-    navbar.style.transition = "opacity 0.3s";
-    navbar.style.opacity = isNavbarVisible ? "1" : "0";
-    navbar.style.animation = isNavbarVisible ? "fadeIn 2s" : "none";
-  } else {
-    navbar.style.position = "relative";
-    navbar.style.opacity = "1";
-    navbar.style.animation = "none";
-  }
-
-  if (scrollPosition >= skillsSection.offsetTop) {
-    isNavbarVisible = false;
-  } else {
-    isNavbarVisible = true;
-  }
+// add click event to select button
+selectBtn.addEventListener("click", () => {
+  // add/remove active class on the container element
+  customSelect.classList.toggle("active");
+  // update the aria-expanded attribute based on the current state
+  selectBtn.setAttribute(
+    "aria-expanded",
+    selectBtn.getAttribute("aria-expanded") === "true" ? "false" : "true"
+  );
 });
+
+optionsList.forEach((option) => {
+  function handler(e) {
+    // Click Events
+    if (e.type === "click" && e.clientX !== 0 && e.clientY !== 0) {
+      selectedValue.textContent = this.children[1].textContent;
+      customSelect.classList.remove("active");
+    }
+    // Key Events
+    if (e.key === "Enter") {
+      selectedValue.textContent = this.textContent;
+      customSelect.classList.remove("active");
+    }
+  }
+
+  option.addEventListener("keyup", handler);
+  option.addEventListener("click", handler);
+});
+
 
 
 // Elastic Custom Cursor
@@ -221,3 +191,4 @@ const tick = () => {
 
 // Start the animation loop
 tick();
+

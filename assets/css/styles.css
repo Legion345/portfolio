@@ -23,6 +23,7 @@
 /* Variables end */
 
 html {
+  background-color: var(--bg-color);
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
@@ -297,65 +298,133 @@ nav ul li {
   font-size: 67px;
 }
 
-.experience1 h3,
-.experience2 h3,
-.experience3 h3 {
+.custom-select {
+  position: relative;
+  width: 750px;
+  max-width: 100%;
+  font-size: 1.15rem;
   color: var(--tertiary-color);
-  background-color: var(--experiences-color);
-  text-align: justify;
-  width: 46rem;
-  padding: 10px;
-  border-radius: 6px;
-  margin-left: 36rem;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-input[type="button"] {
-  background-color: var(--experiences-color);
-  color: var(--tertiary-color);
-  border: none;
-  padding: 0rem 1rem;
-  font-size: 30px;
-  border-radius: 4px;
+.select-button {
+  width: 100%;
+  font-size: 1.15rem;
+  background-color: var(--extra-color);
+  padding: 0.675em 1em;
+  border: 1px solid var(--bg-color);
+  border-radius: 0.25rem;
   cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-input[type="button"]:hover {
-  color: var(--primary-color);
+.selected-value {
+  text-align: left;
+  color: var(--tertiary-color)
 }
 
-input[type="button"]:focus {
-  outline: none;
+.arrow {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--tertiary-color);
+  transition: transform ease-in-out 0.3s;
 }
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.select-dropdown {
+  position: absolute;
+  list-style: none;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background-color: var(--experiences-color);
+  border: 1px solid var(--bg-color);
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  transition: 0.5s ease;
+
+  transform: scaleY(0);
+  opacity: 0;
+  visibility: hidden;
 }
 
-@keyframes slideOut {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
+.select-dropdown:focus-within {
+  box-shadow: 0 10px 25px rgba(94, 108, 233, 0.6);
 }
 
-.new-box {
-  animation: slideIn 0.5s ease-in-out;
+.select-dropdown li {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  gap: 1rem;
+  align-items: center;
 }
 
-.new-box.slide-out {
-  animation: slideOut 0.5s ease-in-out;
+.select-dropdown li label {
+  width: 100%;
+  padding: 8px 10px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
+
+.select-dropdown::-webkit-scrollbar {
+  width: 7px;
+}
+.select-dropdown::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+
+.select-dropdown::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 25px;
+}
+
+
+
+.select-dropdown input:focus ~ label {
+  background-color: #dfdfdf;
+}
+
+.select-dropdown input[type="radio"] {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+
+/* interactivity */
+
+.custom-select.active .arrow {
+  transform: rotate(180deg);
+}
+
+.custom-select.active .select-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+}
+
+/*=============
+Aesthetics 
+=========================*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
 
 /* My Experience ends */
 

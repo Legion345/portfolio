@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    
+    <!-- Utilities -->
     <div class="circle"></div>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -189,9 +190,52 @@
       <p><br></p>
       <p><br></p>
   <h2 class="experience">Professional<br>Experience</h2>
-  <div class="experience1">
-    <h3 class="experience1-title">&ensp;IT Technician @ National Veterinary Associates&emsp; &emsp; &emsp;  2022 - Present&emsp;
-      <input class="add-btn" type="button" value=" + " /></h3>
+
+  <div class="custom-select">
+    <button
+      class="select-button"
+      role="combobox"
+      aria-labelledby="select button"
+      aria-haspopup="listbox"
+      aria-expanded="false"
+      aria-controls="select-dropdown"
+    >
+      <span class="selected-value">IT Technician @ National Veterinary Associates&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2022 - Present</span>
+      <span class="arrow"></span>
+    </button>
+    <ul class="select-dropdown" role="listbox" id="select-dropdown">
+      <li role="option">
+        <input type="radio" id="github" name="social-account" />
+        <label for="github"><i class="bx bx-buildings"></i>Westlake Village, CA</label>
+      </li>
+      <li role="option">
+        <input type="radio" id="instagram" name="social-account" />
+        <label for="instagram"
+          ><i></i>Provided desktop support to end-users,  troubleshooting equipment issues, networking challenges, and executing  break-fix efforts</label
+        >
+      </li>
+      </li>
+      <li role="option">
+        <input type="radio" id="linkedIn" name="social-account" />
+        <label for="linkedIn"
+          ><i class="bx bx-buildings"></i>LinkedIn</label
+        >
+      </li>
+      <li role="option">
+        <input type="radio" id="twitter" name="social-account" />
+        <label for="twitter"><i class="bx bx-calendar-week"></i>Twitter</label>
+      </li>
+      <li role="option">
+        <input type="radio" id="reddit" name="social-account" />
+        <label for="reddit"><i class=" bx bxl-digitalocean"></i>Reddit</label>
+      </li>
+    </ul>
+  </div>
+  
+  <link  href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"
+  />
+  
+  
       <p><br></p>
   </div>
 
@@ -219,14 +263,14 @@
               <div class="ft-main-item">
                 <h2 class="ft-title">Available for freelance opportunities</h2>
                 <p>Need help with an exciting project?<br>Email or contact me via social networks!</p>
-                <form>
-                  <input type="email" name="email" placeholder="Enter email address">
-                  <input type="submit" value="Submit">
-                </form>
                 <br>
                 <h2 class="ft-title">Contact</h2>
                 <ul>
-                  <li><a href="mailto:harelasaraf@gmail.com">harelasaraf@gmail.com</a></li>
+                  <li><a href="mailto:harelasaraf@gmail.com">harelasaraf@gmail.com</a></li><br>
+                  <li><a href="https://floss.social/@Legion345">Mastadon</a></li>
+                  <li><a href="https://www.linkedin.com/in/harelasaraf/">LinkedIn</a></li>
+                  <li><a href="https://www.instagram.com/harelasaraf/">Instagram</a></li>
+                  <li><a href="https://github.com/Legion345">GitHub</a></li>
                 </ul>
                 <br>
                 <h2 class="ft-title">About</h2>
