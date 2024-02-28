@@ -31,7 +31,33 @@ scrollUp.addEventListener("click", () => {
 });
 
 
+// Navbar sticky to fade in fixed at hero section 
+var heroSection = document.getElementById('home');
+var skillsSection = document.getElementById('skills-section');
+var navbar = document.querySelector("nav");
+var isNavbarVisible = true;
 
+window.addEventListener('scroll', function() {
+  var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollPosition >= heroSection.offsetHeight) {
+    navbar.style.position = "sticky";
+    navbar.style.top = "0";
+    navbar.style.transition = "opacity 0.3s";
+    navbar.style.opacity = isNavbarVisible ? "1" : "0";
+    navbar.style.animation = isNavbarVisible ? "fadeIn 2s" : "none";
+  } else {
+    navbar.style.position = "relative";
+    navbar.style.opacity = "1";
+    navbar.style.animation = "none";
+  }
+
+  if (scrollPosition >= skillsSection.offsetTop) {
+    isNavbarVisible = false;
+  } else {
+    isNavbarVisible = true;
+  }
+});
 
 // Get the reference to the .bio-title element
 const bioTitle = document.querySelector('.bio-title');
