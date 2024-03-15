@@ -321,6 +321,8 @@ nav ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 .selected-value {
@@ -352,6 +354,8 @@ nav ul li {
   transform: scaleY(0);
   opacity: 0;
   visibility: hidden;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 .select-dropdown:focus-within {

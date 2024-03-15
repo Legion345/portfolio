@@ -31,7 +31,7 @@ scrollUp.addEventListener("click", () => {
 });
 
 
-// Navbar sticky to fade in fixed at hero section 
+// Navbar sticky to fade in fixed at hero section
 var heroSection = document.getElementById('home');
 var skillsSection = document.getElementById('skills-section');
 var navbar = document.querySelector("nav");
@@ -66,11 +66,11 @@ const bioTitle = document.querySelector('.bio-title');
 function adjustBioTitleSize() {
   // Get the width of the window
   const windowWidth = window.innerWidth;
-  
+
   // Calculate the new font size and padding based on the window width
   const fontSize = windowWidth * 0.0977; // Approximately 5.2vw based on 1920px width
   const padding = windowWidth * 0.0167; // Approximately 1vw based on 1920px width
-  
+
   // Update the font size and padding of the .bio-title element
   bioTitle.style.fontSize = `${fontSize}px`;
   bioTitle.style.padding = `${padding}px`;
@@ -93,11 +93,11 @@ const bioText = document.querySelector('.bio-text');
 function adjustBioTextSize() {
   // Get the width of the window
   const windowWidth = window.innerWidth;
-  
+
   // Calculate the new font size and padding based on the window width
   const fontSize = windowWidth * 0.0182; // Approximately 1vw based on 1920px width
   const padding = windowWidth * 0.0167; // Approximately 1vw based on 1920px width
-  
+
   // Update the font size and padding of the .bio-text element
   bioText.style.fontSize = `${fontSize}px`;
   bioText.style.padding = `${padding}px`;
@@ -190,7 +190,7 @@ const tick = () => {
   previousMouse.x = mouse.x;
   previousMouse.y = mouse.y;
   // 2. Calculate mouse velocity using Pythagorean theorem and adjust speed
-  const mouseVelocity = Math.min(Math.sqrt(deltaMouseX**2 + deltaMouseY**2) * 4, 150); 
+  const mouseVelocity = Math.min(Math.sqrt(deltaMouseX**2 + deltaMouseY**2) * 4, 150);
   // 3. Convert mouse velocity to a value in the range [0, 0.5]
   const scaleValue = (mouseVelocity / 150) * 0.5;
   // 4. Smoothly update the current scale
