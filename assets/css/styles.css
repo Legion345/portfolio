@@ -162,16 +162,12 @@ nav ul li {
 
 .middle {
   transition: 1s ease;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%)
-}
-
-.container:hover .image {
-  opacity: 0.6;
 }
 
 .container:hover .middle {
@@ -203,11 +199,34 @@ nav ul li {
 
 .bio h1 {
   margin-bottom: var(--bottom-margin);
+  text-align: center;
 }
 
 .bio p {
   line-height: var(--line-height);
   padding: 0.3rem 0;
+  text-align: center;
+}
+
+/* Adjustments for mobile */
+@media only screen and (max-width: 600px) {
+  .bio {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .bio .bio-title {
+    font-size: 80px;
+    padding: 8px 16px;
+    text-align: center;
+  }
+  
+  .bio .bio-text {
+    font-size: 20px;
+    padding: 8rem;
+    text-align: center;
+  }
 }
 
 /* Hero section ends */
@@ -540,8 +559,8 @@ body {
   background-color: var(--experiences-color);
   padding: 73px;
   margin-top: 325px;
-  margin-left: -619px;
-  margin-right: 245px;
+  margin-left: -613px;
+  margin-right: 271px;
 }
 
 .ft-main-item4 .inner-box h3 {
